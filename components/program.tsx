@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/timeline";
 export function EventProgram() {
   const data = [
     {
-      title: "8:30 : Accueil & Lancement",
+      title: "8:30 - Ouverture",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
@@ -21,7 +21,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "9:00 : Panel sur les Défis du Business Digital",
+      title: "9:00 - Digital Business' Challenges",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-lg md:text-xl font-medium mb-4 leading-relaxed">
@@ -29,7 +29,7 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/digi.webp"
+              src="/planing/DigitalV2.webp"
               alt="Business Digital Panel"
               width={700}
               height={500}
@@ -40,15 +40,15 @@ export function EventProgram() {
       ),
     },
     {
-      title: "9:45 : Startup’Innov",
+      title: "9:45 - Startup’Innov",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-lg md:text-xl font-medium mb-4 leading-relaxed">
-            Inspirez-vous des startups émergentes qui façonnent l&apos;avenir avec des solutions innovantes et des modèles d&apos;affaires disruptifs.
+          Écoutez des start-ups tunisiennes partager leurs parcours inspirants, leurs innovations et leurs visions pour l’avenir.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/innov.webp"
+              src="/planing/Startup'innov.webp"
               alt="Startup Innov"
               width={700}
               height={500}
@@ -59,7 +59,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "10:30 : Pause Café",
+      title: "10:30 - Pause Café",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <div className="flex flex-col md:flex-row items-center gap-6">
@@ -75,15 +75,15 @@ export function EventProgram() {
       ),
     },
     {
-      title: "10:45 : Reso’Débats",
+      title: "10:45 - Réso’Débat",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-lg md:text-xl font-medium mb-4 leading-relaxed">
-            Participez à des discussions dynamiques sur les enjeux clés de l&apos;industrie et échangez des idées avec des experts et autres participants.
+          Engagez un dialogue avec des recruteurs et experts du marché pour mieux comprendre les tendances actuelles et maximiser vos chances de réussite.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/debat.webp"
+              src="/planing/Réso'Débat.webp"
               alt="Reso Débats"
               width={700}
               height={500}
@@ -94,7 +94,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "11:45 : Visite des Stands",
+      title: "11:45 - Visite des Stands",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-lg md:text-xl font-medium mb-4 leading-relaxed">
@@ -113,11 +113,13 @@ export function EventProgram() {
       ),
     },
     {
-      title: "13:30 : Atelier Certifié PMI",
+      title: "13:30 -\nWorkshop: Formation certifiante PMI",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
+          <br />
+          <br />
           <p className="text-white dark:text-neutral-200 text-lg md:text-xl font-medium mb-4 leading-relaxed">
-            Développez vos compétences en gestion de projets avec une session certifiée PMI. Acquérez des outils et techniques pour une gestion efficace de vos projets professionnels.
+          Une session immersive animée par INJAZ Tunisie pour acquérir des compétences professionnelles clés et booster votre insertion professionnelle.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
@@ -132,7 +134,7 @@ export function EventProgram() {
       ),
     },
     {
-      title: "15:30 : Clôture",
+      title: "15:30 - Clôture",
       content: (
         <div className="dark:bg-neutral-800 p-6 mb-4 rounded-lg transform transition-transform duration-300 hover:scale-105">
           <p className="text-white dark:text-neutral-200 text-lg md:text-xl font-medium mb-4 leading-relaxed">

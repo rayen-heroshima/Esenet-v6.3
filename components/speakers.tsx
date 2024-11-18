@@ -37,12 +37,12 @@ export function Speaker() {
       designation: "PDG Poulina Group Holding",
       src: "/speqkers/Mahjoub.webp",
     },
-    {
+   {
       quote:
         "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Mohamed Salah Frad",
-      designation: "Directeur Général UGFS North Africa",
-      src: "/speqkers/mohamed-salah-2.webp",
+      name: "Sahar Mechri",
+      designation: "Dir. Exécutive Magazine Managers",
+      src: "/speqkers/Sarahh.jpg",
     },
     {
       quote:
