@@ -74,6 +74,13 @@ export function Speaker() {
       designation: "CEO BI4YOU",
       src: "/speqkers/Abdelkerim.webp",
     },
+    {
+      quote:
+        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+      name: "Khaled Dridi",
+      designation: "Directeur d’investissement Startup UGFS",
+      src: "/speqkers/khaled.jpg",
+    },
   ];
 
   const containerRef = useRef<HTMLDivElement | null>(null);

@@ -32,6 +32,7 @@ const sponsors: Sponsor[] = [
   { name: "TIDCE", logo: "/logo/tidce.png" },
   { name: "Trust IT", logo: "/logo/trust.png" },
   { name: "ODC", logo: "/logo/orange.png" },
+  { name: "Managers", logo: "/logo/M.png" },
   
   
   
