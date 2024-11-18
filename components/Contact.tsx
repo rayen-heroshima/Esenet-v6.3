@@ -206,7 +206,7 @@ const [modalContent, setModalContent] = useState("");
                 <option value="stage" className='text-black'>D’un stage</option>
                 <option value="emploi" className='text-black'>D’un emploi</option>
                 <option value="apprentissage" className='text-black'>D’un apprentissage</option>
-                <option value="information" className='text-black'>D’information</option>
+                <option value="information" className='text-black'>D’informations</option>
               </select>
             </>
           )}
@@ -234,7 +234,7 @@ const [modalContent, setModalContent] = useState("");
                 <option value="stager" className='text-black'>De stagiaires</option>
                 <option value="networking" className='text-black'>De networking</option>
                 <option value="partenaires" className='text-black'>De partenaires</option>
-                <option value="information" className='text-black'>D’information</option>
+                <option value="information" className='text-black'>D’informations</option>
               </select>
             </>
           )}
