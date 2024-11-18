@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import { Button } from "./ui/button";
@@ -83,7 +83,7 @@ export const ImagesSliderDemo: React.FC<ImagesSliderDemoProps> = ({ className })
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }, []);
 
-  const images: string[] = ["/gallery/501.webp", "/gallery/10.webp", "/gallery/9.webp", "/gallery/97.webp"];
+  const images: string[] = ["/gallery/501.webp", "/gallery/10.webp", "/gallery/9.webp"];
 
   return (
     <ImagesSlider className={`h-[40rem] backdrop-blur-sm bg-black ${className || ""}`} images={images} overlay={false}>
@@ -93,24 +93,18 @@ export const ImagesSliderDemo: React.FC<ImagesSliderDemoProps> = ({ className })
         transition={{ duration: 0.6 }}
         className="z-50 flex flex-col justify-center items-center px-4"
       >
-        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+        <p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           <span className="text-transparent bg-gradient-to-b bg-clip-text from-blue-900 to-blue-500">
             ESENet Job Fair
           </span>
           <br />
           Odyssée Business 4.0 <br />
           Votre réseau, votre avenir
-        </motion.p>
+        </p>
 
         <Countdown />
 
-        <Button
-          onClick={scrollToBottom}
-          className="px-6 py-3 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center rounded-full relative mt-4 hover:bg-blue-400/20 transition-all duration-300 hover:scale-105"
-        >
-          <span className="text-lg">Inscrivez-vous maintenant →</span>
-          <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-blue-500 to-transparent" />
-        </Button>
+        
       </motion.div>
     </ImagesSlider>
   );

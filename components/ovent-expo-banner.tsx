@@ -1,6 +1,6 @@
-"use client";
 
-import React from "react";
+
+
 import { Calendar, MessageSquare } from "lucide-react";
 import { Boxes } from "./ui/background-boxes";
 

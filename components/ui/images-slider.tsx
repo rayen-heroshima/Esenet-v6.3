@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 export const ImagesSlider = ({
   images,
@@ -126,7 +126,7 @@ export const ImagesSlider = ({
             variants={slideVariants}
             className="image h-full w-full absolute inset-0 object-cover object-center"
             style={{ willChange: "transform, opacity" }}
-            loading="lazy"
+           
           />
         </AnimatePresence>
       )}

@@ -1,6 +1,4 @@
-"use client";
 
-import { motion } from "framer-motion";
 
 interface Sponsor {
   name: string;
@@ -52,10 +50,10 @@ export function HappySponsors() {
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {sponsors.map((sponsor, index) => (
-            <motion.div
+            <div
               key={index}
               className="relative flex items-center justify-center p-6 bg-gray-50 rounded-lg shadow-sm overflow-hidden group"
-              whileHover={{ scale: 1.05 }} // Slight zoom on hover
+              
             >
               {/* Background image as the sponsor's logo with overlay */}
               <div
@@ -78,7 +76,7 @@ export function HappySponsors() {
                   <p className="text-xs mt-2">{sponsor.description}</p>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
