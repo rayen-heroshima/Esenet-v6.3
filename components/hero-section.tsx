@@ -17,16 +17,18 @@ interface TimerComponentProps {
   label: string;
 }
 
-const TimerComponent: React.FC<TimerComponentProps> = ({ value, label }) => (
-  <div className="flex flex-col items-center justify-center bg-blue-500/10 rounded-lg p-3 m-2 min-w-[100px] border border-blue-500/20">
-    <span className="text-3xl font-bold text-white mb-1">
-      {value.toString().padStart(2, "0")}
-    </span>
-    <span className="text-xs uppercase tracking-wider text-blue-200">{label}</span>
-  </div>
-);
+const ImagesSliderDemo: React.FC<{ className?: string }> = ({ className }) => {
+  // Timer Component
+  const TimerComponent: React.FC<TimerComponentProps> = ({ value, label }) => (
+    <div className="flex flex-col items-center justify-center bg-blue-500/10 rounded-lg p-3 m-2 min-w-[100px] border border-blue-500/20">
+      <span className="text-3xl font-bold text-white mb-1">
+        {value.toString().padStart(2, "0")}
+      </span>
+      <span className="text-xs uppercase tracking-wider text-blue-200">{label}</span>
+    </div>
+  );
 
-const Countdown: React.FC = () => {
+  // Countdown Logic
   const calculateTimeLeft = useCallback((): TimeLeft | null => {
     const targetDate = new Date("2024-11-27");
     const difference = +targetDate - +new Date();
@@ -51,38 +53,36 @@ const Countdown: React.FC = () => {
     return () => clearInterval(timer);
   }, [calculateTimeLeft]);
 
-  if (!timeLeft) {
+  const Countdown: React.FC = () => {
+    if (!timeLeft) {
+      return (
+        <div className="text-white text-xl font-bold bg-blue-500/10 backdrop-blur-sm rounded-lg p-4 mt-6">
+          L'événement a commencé !
+        </div>
+      );
+    }
+
     return (
-      <div className="text-white text-xl font-bold bg-blue-500/10 backdrop-blur-sm rounded-lg p-4 mt-6">
-        L'événement a commencé !
+      <div className="mt-8 mb-6">
+        <div className="text-center mb-4">
+          <span className="text-blue-200 text-sm uppercase tracking-wider">L'événement commence dans</span>
+        </div>
+        <div className="flex flex-wrap justify-center gap-2">
+          <TimerComponent value={timeLeft.days} label="jours" />
+          <TimerComponent value={timeLeft.hours} label="heures" />
+          <TimerComponent value={timeLeft.minutes} label="minutes" />
+          <TimerComponent value={timeLeft.seconds} label="secondes" />
+        </div>
       </div>
     );
-  }
+  };
 
-  return (
-    <div className="mt-8 mb-6">
-      <div className="text-center mb-4">
-        <span className="text-blue-200 text-sm uppercase tracking-wider">L'événement commence dans</span>
-      </div>
-      <div className="flex flex-wrap justify-center gap-2">
-        <TimerComponent value={timeLeft.days} label="jours" />
-        <TimerComponent value={timeLeft.hours} label="heures" />
-        <TimerComponent value={timeLeft.minutes} label="minutes" />
-        <TimerComponent value={timeLeft.seconds} label="secondes" />
-      </div>
-    </div>
-  );
-};
-
-interface ImagesSliderDemoProps {
-  className?: string;
-}
-
-export const ImagesSliderDemo: React.FC<ImagesSliderDemoProps> = ({ className }) => {
+  // Scroll to Bottom
   const scrollToBottom = useCallback(() => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }, []);
 
+  // Images Slider
   const images: string[] = ["/gallery/501.webp", "/gallery/10.webp", "/gallery/9.webp"];
 
   return (
@@ -104,7 +104,9 @@ export const ImagesSliderDemo: React.FC<ImagesSliderDemoProps> = ({ className })
 
         <Countdown />
 
-        
+        <Button onClick={scrollToBottom} className="mt-6">
+          Voir plus
+        </Button>
       </motion.div>
     </ImagesSlider>
   );
