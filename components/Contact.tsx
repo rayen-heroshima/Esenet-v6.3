@@ -78,7 +78,7 @@ const [modalContent, setModalContent] = useState("");
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-white to-blue-200">
-            inscrivez vous
+            Inscrivez vous
           </h2>
           <Card className="p-8 bg-white/5 backdrop-blur-lg border-white/10">
             <form onSubmit={handleSubmit} className="space-y-8">
