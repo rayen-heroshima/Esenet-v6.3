@@ -29,7 +29,7 @@ export function EventProgram() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Image
-              src="/planing/DigitalV2.webp"
+              src="/planing/Business.jpg"
               alt="Business Digital Panel"
               width={700}
               height={500}
